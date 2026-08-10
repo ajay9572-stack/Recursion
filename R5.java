@@ -1,5 +1,5 @@
 public class R5 {
-    // sum of n digit where n= 5
+    // sum of n th digit where n= 5
     public static void main(String[] args){
       int ans = sum(5);
       System.out.print(ans);
