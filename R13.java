@@ -1,4 +1,5 @@
 public class R13 {
+    // find target element of an array
     public static void main(String[] args) {
         int [] arr = {1, 2, 5, 18, 9};
         System.out.println(find(arr,18,0));
