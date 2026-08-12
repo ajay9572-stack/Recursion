@@ -9,7 +9,7 @@ public class R17{
        }       
        if(c<r){
         star(r, c+1);
-        System.out.print(" *");
+        System.out.print(" * ");
        }
       else{
        star(r-1, 0);
