@@ -19,26 +19,26 @@ public class RS3 {
         int[] first = mergeShort(Arrays.copyOfRange(arr, 0, mid));
         int[] second = mergeShort(Arrays.copyOfRange(arr, mid, arr.length));
 
-        return merge(first,second);
+        return merge(first,second);          // Merging the two sorted arrays
     }
-    private static int[] merge(int[] first, int[] second) {
-       int[] mix = new int[first.length+ second.length];
+    private static int[] merge(int[] first, int[] second) {          // Method to merge two sorted arrays
+       int[] mix = new int[first.length+ second.length];             // Creating a new array to store the merged result
  
-        int i= 0;
-        int j= 0;
-        int k =0;
+        int i= 0;                         // pointer for first array
+        int j= 0;                       //  pointer for second array
+        int k =0;                        // pointer for result array
 
-       while (i< first.length && j< second.length) {
-        if(first[i]< second[j]){
-            mix [k]= first[i];
-            i++;
+       while (i< first.length && j< second.length) {            // Compare elements of both arrays until one array is completely traversed
+        if(first[i]< second[j]){                                // If element of first array is smaller
+            mix [k]= first[i];                                  // Put first array element into mix
+            i++;                                                  // Move first array pointer
         }else{
             mix[k]= second[j];
             j++;
         }
-        k++;     
+        k++;                       // Move result array pointer
        }
-       while (i< first.length) {
+       while (i< first.length) {                  // If elements are remaining in first array, copy them into mix
         mix[k] = first[i];
         i++;
         k++;    
