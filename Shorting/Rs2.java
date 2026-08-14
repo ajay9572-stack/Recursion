@@ -10,7 +10,7 @@ public class Rs2 {
       System.out.println(Arrays.toString(arr));  
     }
 
-    static void selection(int[] arr, int r, int c, int max){
+    static void selection(int[] arr, int r, int c, int max){   // here max is as a array index value not not array elemnent  
         if(r==0){
             return;
         }
