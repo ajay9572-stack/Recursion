@@ -13,28 +13,28 @@ public class RS4 {
             return;
         }
 
-        int start = low;
-        int end = high;
-        int mid = low + (high - low) / 2;
+        int s = low;
+        int e = high;
+        int mid = s + (e - s) / 2;
         int pivot = arr[mid];
 
        
-        while (start <= end) {
-            while (arr[start] < pivot) {
-                start++;
+        while (s <= e) {
+            while (arr[s] < pivot) {
+                s++;
             }
-            while (arr[end] > pivot) {
-                end--;
+            while (arr[e] > pivot) {
+                e--;
             }
-            if (start <= end) {
-                int temp = arr[start];
-                arr[start] = arr[end];
-                arr[end] = temp;
-                start++;
-                end--;
+            if (s <= e) {
+                int temp = arr[s];
+                arr[s] = arr[e];
+                arr[e] = temp;
+                s++;
+                e--;
             }
         }
-        quickSort(arr, low, end);
-        quickSort(arr, start, high);
+        quickSort(arr, low, e);
+        quickSort(arr, s, high);
     }
 }
